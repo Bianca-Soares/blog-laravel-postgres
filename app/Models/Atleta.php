@@ -12,6 +12,7 @@ class Atleta extends Authenticatable
 
     use HasFactory, Notifiable;
     protected $table = 'tb_atleta';
+    protected $primaryKey = 'cpf';
     /**
      * The attributes that are mass assignable.
      *
