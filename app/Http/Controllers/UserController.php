@@ -16,12 +16,13 @@ class UserController extends Controller
         $usuarios = Usuario::where('CPF', '=', $CPF)->where('senha', '=', $senha)->first();
         
         if(@$usuarios->CPF != null){
+            
             @session_start();
             $_SESSION['CPF_usuario'] = $usuarios->CPF;
             $_SESSION['nome_usuario'] = $usuarios->nome;
-            $_SESSION['nivel_usuario'] = $usuarios->nivel;
+            $_SESSION['nivel_usuario'] = $usuarios->perfil;
             
-            if($_SESSION['nivel_usuario'] == 'adminS'){
+            if($_SESSION['nivel_usuario'] == 'admins'){
                 return view('painel-ADMS.Index');
             }
             if($_SESSION['nivel_usuario'] == 'admin'){
@@ -63,6 +64,5 @@ class UserController extends Controller
 
         return view('Index');
     }
-
 
 }

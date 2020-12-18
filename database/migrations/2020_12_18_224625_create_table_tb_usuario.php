@@ -19,6 +19,7 @@ class CreateTableTbUsuario extends Migration
             $table->string('nome');
             $table->string('email');
             $table->string('senha');
+            $table->string('perfil');
             $table->timestamps();
         });
     }

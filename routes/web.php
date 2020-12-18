@@ -22,12 +22,12 @@ Route::get('/', function () {
     return view('Index');
 });
 
+Route::post('painel',[UserController::class, 'login'])-> name('usuario.login');
+
 /*Rotas para criar novo usuário*/
 Route::get('usuario/novo', [UserController::class, 'novo']);
 
 Route::post('usuario/inserir', [UserController::class, 'inserir']);
-
-Route::post('painel',[UserController::class, 'login'])-> name('usuario.login');//EM REVISÂO
 
 /*Rotas para criar novo atleta*/
 Route::get('atleta/novo', [AtletaController::class, 'novo']);

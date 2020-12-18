@@ -22,6 +22,7 @@ class usuario extends Model
         'nome',
         'email',
         'senha',
+        'perfil',
     ];
 
 }
