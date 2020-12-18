@@ -8,9 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Usuario extends Model
 {
     public $timestamps = false;
-    use HasFactory;
+    use HasFactory ;
 
-    protected $table = 'tb_atleta';
+    protected $table = 'tb_usuario';
     protected $primaryKey = 'CPF';
     /**
      * The attributes that are mass assignable.

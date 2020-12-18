@@ -61,7 +61,7 @@ class UserController extends Controller
         $atleta = new Usuario();
         $atleta = $atleta->create( $request->all() );
 
-        return view('home');
+        return view('Index');
     }
 
 

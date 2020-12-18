@@ -14,20 +14,24 @@
                         </div>
                     @endif
 
-        <form action="{{ url('atleta/inserir') }}" method="post">
+        <form action="{{ url('usuario/inserir') }}" method="post">
         
         @csrf
             <div class="form-group">
-                <label for="exampleInputEmail1">Nome: </label>
-                <input type="text" name="nome" class="form-control" >
+                <label for="example-text-input">Nome: </label>
+                <input type="text" name="nome" class="form-control" placeholder="Digite seu nome">
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">CPF: </label>
-                <input type="text" name="cpf" class="form-control" >
+                <input type="text" name="CPF" class="form-control" placeholder="Digite seu CPF">
             </div>
             <div class="form-group">
-                <label for="exampleInputEmail1">Data de Nascimento</label>
-                <input type="text" name="data_nasc" class="form-control" >
+                <label for="exampleInputEmail1">Email</label>
+                <input type="text" name="email" class="form-control" placeholder="Digite seu email"> 
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Senha</label>
+                <input type="password" name="senha" class="form-control" id="exampleInputPassword1" placeholder="Password">
             </div>
 
             

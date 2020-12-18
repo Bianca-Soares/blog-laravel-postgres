@@ -13,19 +13,14 @@ class CreateTableTbUsuario extends Migration
      */
     public function up()
     {
-        Schema::table('tb_usuario', function (Blueprint $table) {
-            if (Schema::hasTable('tb_usuario')) {
-            //Schema::dropIfExists('tb_usuario');
-        }else{
+        Schema::create('tb_usuario', function (Blueprint $table) {
+            $table->id();
             $table->string('CPF');
             $table->string('nome');
             $table->string('email');
             $table->string('senha');
             $table->timestamps();
-
-        }    
         });
-    
     }
 
     /**
@@ -35,8 +30,6 @@ class CreateTableTbUsuario extends Migration
      */
     public function down()
     {
-        Schema::table('tb_usuario', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('tb_usuario');
     }
 }
