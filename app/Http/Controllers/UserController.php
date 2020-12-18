@@ -58,8 +58,8 @@ class UserController extends Controller
 //Inserir usuario no banco 
     public function inserir(Request $request){
 
-        $atleta = new Usuario();
-        $atleta = $atleta->create( $request->all() );
+        $usuario = new Usuario();
+        $usuario = $usuario->create( $request->all() );
 
         return view('Index');
     }
