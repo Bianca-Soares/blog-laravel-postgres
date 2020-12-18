@@ -33,7 +33,7 @@
               <button type="submit" class="btn btn-primary btn-block btn-large">Entrar</button>
             </form>
             <a href="#!" class="forgot-password-link">Esqueceu a senha?</a>
-            <p class="login-wrapper-footer-text">Não possui uma conta? <a href="#!" class="text-reset">Cadastre aqui</a></p>
+            <p class="login-wrapper-footer-text">Não possui uma conta? <a href="{{ url('usuario/novo') }}" class="text-reset">Cadastre aqui</a></p>
           </div>
         </div>
         <div class="col-sm-6 px-0 d-none d-sm-block">

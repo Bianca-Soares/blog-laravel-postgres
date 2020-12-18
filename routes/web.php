@@ -16,26 +16,33 @@ use App\Http\Controllers\UserController;
 |
 */
 
+
+/*Rota inicial*/
 Route::get('/', function () {
     return view('Index');
 });
-Route::post('painel',[UserController::class, 'login'])-> name('usuario.login');
+
+/*Rotas para criar novo usuário*/
+Route::get('usuario/novo', [UserController::class, 'novo']);
+
+Route::post('painel',[UserController::class, 'login'])-> name('usuario.login');//EM REVISÂO
+
+/*Rotas para criar novo atleta*/
+Route::get('atleta/novo', [AtletaController::class, 'novo']);
+
+Route::post('atleta/inserir', [AtletaController::class, 'inserir']);
+
+/*Rotas para listar novo atleta*/
+Route::get('atleta/lista', [AtletaController::class, 'lista']);
 
 
+/*EM REVISÃO*/
 Route::get('/login', function () {
     return view('login');
 });
 Route::get('/home', function () {
     return view('home');
 });
-
-
-Route::get('atleta/lista', [AtletaController::class, 'lista']);
-
-//Rotas para criar novo atleta
-Route::get('atleta/novo', [AtletaController::class, 'novo']);
-
-Route::post('atleta/inserir', [AtletaController::class, 'inserir']);
 
 
 Route::get('users', function (){

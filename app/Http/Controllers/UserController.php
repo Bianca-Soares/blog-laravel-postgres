@@ -2,17 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\usuario;
+use App\Models\Usuario;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
+
     public function login(Request $request){
         
         $CPF = $request->CPF;
         $senha = $request->senha;
 
-        $usuarios = usuario::where('CPF', '=', $CPF)->where('senha', '=', $senha)->first();
+        $usuarios = Usuario::where('CPF', '=', $CPF)->where('senha', '=', $senha)->first();
         
         if(@$usuarios->CPF != null){
             @session_start();
@@ -48,4 +49,20 @@ class UserController extends Controller
         @session_destroy();
         return view('Index');
      }
+
+//Pág do formurário de usuário
+    public function novo(){
+        return view('usuario.form');
+    }
+
+//Inserir usuario no banco 
+    public function inserir(Request $request){
+
+        $atleta = new Usuario();
+        $atleta = $atleta->create( $request->all() );
+
+        return view('home');
+    }
+
+
 }
