@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AtletaController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,8 +17,11 @@ use App\Http\Controllers\AtletaController;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('Index');
 });
+Route::post('painel',[UserController::class, 'login'])-> name('usuario.login');
+
+
 Route::get('/login', function () {
     return view('login');
 });

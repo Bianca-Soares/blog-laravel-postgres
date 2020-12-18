@@ -20,7 +20,7 @@ class CreateTableAtleta extends Migration
     {
         if (Schema::hasTable('tb_atleta')) 
         {
-            Schema::dropIfExists('tb_atleta');
+            //Schema::dropIfExists('tb_atleta');
         }else{
             Schema::create('tb_atleta', function (Blueprint $table) {
                 $table->string('nome');
