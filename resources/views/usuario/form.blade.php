@@ -34,7 +34,6 @@
                 <input type="password" name="senha" class="form-control" id="exampleInputPassword1" placeholder="Password">
             </div>
             <div class="form-group">
-            <div class="form-group">
                 <label class="mr-sm-2" for="inlineFormCustomSelect">Seu perfil de usuário</label>
                 <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect" name="perfil"> 
                     <option selected>Escolha aqui...</option>
@@ -46,13 +45,6 @@
                     <option value="coord_time">Coordenador de time</option>
                 </select>
             </div>
-
-
-
-                <label for="exampleInputEmail1">Perfil</label>
-                <input type="text" name="perfil" class="form-control" placeholder="Perfil de usuário"> 
-            </div>
-
             
             <button type="submit" class="btn btn-primary">Cadastar</button>
         </form>
