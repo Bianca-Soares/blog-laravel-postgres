@@ -34,7 +34,18 @@
                 <input type="password" name="senha" class="form-control" id="exampleInputPassword1" placeholder="Password">
             </div>
             <div class="form-group">
-        
+            <div class="form-group">
+                <label class="mr-sm-2" for="inlineFormCustomSelect">Seu perfil de usuário</label>
+                <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect" name="perfil"> 
+                    <option selected>Escolha aqui...</option>
+                    <option value="admins">Diretor técnico</option>
+                    <option value="arbitro">Ábitro</option>
+                    <option value="atleta">Atleta</option>
+                    <option value="com_tec">Profissional de commissão técnica</option>
+                    <option value="coord_compet">Coordenador de competição</option>
+                    <option value="coord_time">Coordenador de time</option>
+                </select>
+            </div>
 
 
 
