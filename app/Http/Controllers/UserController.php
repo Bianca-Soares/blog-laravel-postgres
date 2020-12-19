@@ -41,7 +41,7 @@ class UserController extends Controller
                 return view($_SESSION['nivel_usuario']."/painel.Index");
             }
             
-            return view($_SESSION['nivel_usuario']."/painel.Index");
+           
           
         } else {
             echo "CPF ou Senha incorreto";
