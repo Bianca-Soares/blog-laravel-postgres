@@ -40,7 +40,7 @@
                     <option value="admins">Diretor técnico</option>
                     <option value="arbitro">Ábitro</option>
                     <option value="atleta">Atleta</option>
-                    <option value="com_tec">Profissional de commissão técnica</option>
+                    <option value="com_tec">Profissional de comissão técnica</option>
                     <option value="coord_compet">Coordenador de competição</option>
                     <option value="coord_time">Coordenador de time</option>
                 </select>

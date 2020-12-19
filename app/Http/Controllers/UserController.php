@@ -4,12 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Models\usuario;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Exception;
 
 class UserController extends Controller
 {
 
     public function login(Request $request){
         
+        $listaPerfil = array('admins', 'admin', 'arbitro', 'atleta', 'com_tec', 'coord_compet', 'coord_time');
+        $perfilOK = false;
         $CPF = $request->CPF;
         $senha = $request->senha;
 
@@ -21,8 +24,20 @@ class UserController extends Controller
             $_SESSION['CPF_usuario'] = $usuarios->CPF;
             $_SESSION['nome_usuario'] = $usuarios->nome;
             $_SESSION['nivel_usuario'] = $usuarios->perfil;
+
+            foreach ($listaPerfil as &$perfil) {
+                if($perfil == $_SESSION['nivel_usuario']){
+                    $perfilOK = true;
+                    break;
+                }
+                if($perfilOK = false){
+                    return view('index');
+                }    
+                
+            }
             
             $pagina = $_SESSION['nivel_usuario']."/painel.Index";
+            
             return view($pagina);
 
           
