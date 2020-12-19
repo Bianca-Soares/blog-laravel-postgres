@@ -34,6 +34,10 @@
                 <input type="password" name="senha" class="form-control" id="exampleInputPassword1" placeholder="Password">
             </div>
             <div class="form-group">
+        
+
+
+
                 <label for="exampleInputEmail1">Perfil</label>
                 <input type="text" name="perfil" class="form-control" placeholder="Perfil de usuário"> 
             </div>
