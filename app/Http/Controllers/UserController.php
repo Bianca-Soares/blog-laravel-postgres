@@ -33,29 +33,16 @@ class UserController extends Controller
                                
             }
             
-            if($perfilOK = false){
-                $pagina = "index";
-            }else{
+            if($perfilOK){
+
                 $pagina = $_SESSION['nivel_usuario']."/painel.Index";
-            
-                return view($pagina);
+            }else{
+
+                $pagina = "index";
             } 
             
+            return view($pagina);
           
-            if($_SESSION['nivel_usuario'] == 'admin'){
-                return view('painel-ADM.Index');
-            }
-            if($_SESSION['nivel_usuario'] == 'atleta'){
-                return view('painel-Atleta.Index');
-            }if($_SESSION['nivel_usuario'] == 'c.time'){
-                return view('painel-C-Time.Index');
-            }if($_SESSION['nivel_usuario'] == 'com.tecnica'){
-                return view('painel-Com.Tecnica.Index');
-            }if($_SESSION['nivel_usuario'] == 'c.competição'){
-                return view('painel-C.Competição.Index');
-            }if($_SESSION['nivel_usuario'] == 'Arbitro'){
-                return view('painel-Arbitros.Index');
-            }
         } else {
             echo "CPF ou Senha incorreto";
             return view ('Index');
