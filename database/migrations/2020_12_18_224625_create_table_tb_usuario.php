@@ -13,15 +13,20 @@ class CreateTableTbUsuario extends Migration
      */
     public function up()
     {
-        Schema::create('tb_usuario', function (Blueprint $table) {
-            $table->id();
-            $table->string('CPF');
-            $table->string('nome');
-            $table->string('email');
-            $table->string('senha');
-            $table->string('perfil');
-            $table->timestamps();
-        });
+        if (Schema::hasTable('tb_usuario')) 
+        {
+            //Schema::dropIfExists('tb_atleta');
+        }else{
+            Schema::create('tb_usuario', function (Blueprint $table) {
+                $table->id();
+                $table->string('CPF');
+                $table->string('nome');
+                $table->string('email');
+                $table->string('senha');
+                $table->string('perfil');
+                $table->timestamps();
+            });
+        }    
     }
 
     /**
