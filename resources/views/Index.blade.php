@@ -25,7 +25,7 @@
               @csrf
               <div class="form-group">
                 <label for="CPF">CPF</label>
-                <input type="text" name="CPF" id="CPF"  placeholder="000.000.000-00"  required="required">
+                <input type="number" name="CPF" id="CPF"  placeholder="000.000.000-00"  required="required">
               </div>
               <div class="form-group mb-4">
                 <label for="password">Senha</label>
