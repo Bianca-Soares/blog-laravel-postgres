@@ -24,6 +24,8 @@ class UserController extends Controller
             $_SESSION['CPF_usuario'] = $usuarios->CPF;
             $_SESSION['nome_usuario'] = $usuarios->nome;
             $_SESSION['nivel_usuario'] = $usuarios->perfil;
+            
+            $pagina = "index";
 
             foreach ($listaPerfil as &$perfil) {
                 if($perfil == $_SESSION['nivel_usuario']){
@@ -36,10 +38,9 @@ class UserController extends Controller
             if($perfilOK){
 
                 $pagina = $_SESSION['nivel_usuario']."/painel.Index";
-            }else{
+            }
 
-                $pagina = "index";
-            } 
+              
             
             return view($pagina);
           
