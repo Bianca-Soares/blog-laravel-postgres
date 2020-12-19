@@ -31,7 +31,7 @@ class UserController extends Controller
             if($_SESSION['nivel_usuario'] == 'atleta'){
                 return view('painel-Atleta.Index');
             }if($_SESSION['nivel_usuario'] == 'c.time'){
-                return view('painel-C.time.Index');
+                return view('painel-C-time.Index');
             }if($_SESSION['nivel_usuario'] == 'com.tecnica'){
                 return view('painel-Com.Tecnica.Index');
             }if($_SESSION['nivel_usuario'] == 'c.competição'){
