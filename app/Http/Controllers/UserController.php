@@ -35,7 +35,7 @@ class UserController extends Controller
                                
             }
             
-            if($perfilOK == true){
+            if($perfilOK){
 
                 $pagina = $_SESSION['nivel_usuario']."/painel.Index";
                 return view($pagina);
