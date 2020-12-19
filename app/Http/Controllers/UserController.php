@@ -35,7 +35,7 @@ class UserController extends Controller
                                
             }
             
-            if($perfilOK){
+            if($perfilOK == true){
 
                 $pagina = $_SESSION['nivel_usuario']."/painel.Index";
                 return view($pagina);
@@ -43,7 +43,7 @@ class UserController extends Controller
                   
         } else {
             echo "CPF ou Senha incorreto";
-            return viewS('Index');
+            return view('Index');
 
         }
     }
