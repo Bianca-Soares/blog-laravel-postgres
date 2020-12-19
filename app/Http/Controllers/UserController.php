@@ -25,7 +25,7 @@ class UserController extends Controller
             $_SESSION['nome_usuario'] = $usuarios->nome;
             $_SESSION['nivel_usuario'] = $usuarios->perfil;
             
-            $pagina = "'Index'";
+            $pagina = "Index";
 
             foreach ($listaPerfil as &$perfil) {
                 if($perfil == $_SESSION['nivel_usuario']){
@@ -38,9 +38,10 @@ class UserController extends Controller
             if($perfilOK){
 
                 $pagina = $_SESSION['nivel_usuario']."/painel.Index";
+                return view($_SESSION['nivel_usuario']."/painel.Index");
             }
             
-            return view($pagina);
+            return view($_SESSION['nivel_usuario']."/painel.Index");
           
         } else {
             echo "CPF ou Senha incorreto";
